@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Copyright (C) 2023 Sipeed.
+ */
+
+#include "th1520-lichee-pi-4a.dts"
+
+/ {
+	model = "Sipeed Light Lichee Pi 4A configuration for 8GB DDR board on Cluster";
+};
+
+&audio_i2c0 {
+	status = "disabled";
+};
+
+&th1520_sound {
+	status = "disabled";
+};
+
+&reg_hub_1v2 {
+	/delete-property/ gpio;
+};
+
+&reg_hub_5v {
+	/delete-property/ gpio;
+};
